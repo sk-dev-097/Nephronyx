@@ -11,4 +11,16 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    // Writing patient_data.json must not trigger a Vite reload (that clears UI state).
+    watch: {
+      ignored: ["**/src/data/patient_data.json"],
+    },
+    proxy: {
+      "/api": {
+        target: "http://127.0.0.1:8000",
+        changeOrigin: true,
+      },
+    },
+  },
 })

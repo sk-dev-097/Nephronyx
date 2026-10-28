@@ -1,0 +1,14 @@
+{
+  "age": 18.0,
+  "sex": 1.0,
+  "bp_systolic_mmHg": 138.0,
+  "bp_diastolic_mmHg": 86.0,
+  "heart_rate_bpm": 74.0,
+  "body_weight_kg": 72.5,
+  "blood_glucose_mg_dL": 92.0,
+  "bun_mg_dL": 12.0,
+  "uacr_mg_g": 8.0,
+  "serum_potassium_mmol_L": 4.2,
+  "serum_creatinine_mg_dL": 0.9,
+  "egfr_mL_min_1.73m2": 95.0
+}

@@ -1,0 +1,12 @@
+{
+  "age": 34,
+  "sex": 0,
+  "bp_systolic_mmHg": 118,
+  "bp_diastolic_mmHg": 76,
+  "body_weight_kg": 68,
+  "heart_rate_bpm": 72,
+  "blood_glucose_mg_dL": 92,
+  "bun_mg_dL": 12,
+  "uacr_mg_g": 8,
+  "serum_potassium_mmol_L": 4.2
+}

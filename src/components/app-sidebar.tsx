@@ -48,9 +48,9 @@ const data = {
       icon: <LayoutDashboardIcon />,
       isActive: true,
       items: [
-        { title: "Overview", url: "#" },
-        { title: "Today's tasks", url: "#" },
-        { title: "Health tip", url: "#" },
+        { title: "Overview", url: "#/" },
+        { title: "Today's tasks", url: "#/" },
+        { title: "Health tip", url: "#/" },
       ],
     },
     {
@@ -62,15 +62,15 @@ const data = {
         { title: "What influenced my result", url: "#" },
         { title: "History", url: "#" },
       ],
-    },  
+    },
     {
       title: "Monitor",
-      url: "#",
+      url: "#/monitor/check-status",
       icon: <ActivityIcon />,
       items: [
-        { title: "Check Status", url: "#" },
+        { title: "Check Status", url: "#/monitor/check-status" },
       ],
-    },  
+    },
     {
       title: "Settings",
       url: "#",
