@@ -1,14 +1,9 @@
 """
 Interactive CKD stage predictor.
-
 Loads the .joblib bundle produced by train.py and prompts the user
 for each feature value, then prints the predicted CKD stage (1-5)
 plus the per-class probabilities.
 
-Usage:
-    python predict.py
-    python predict.py --model ckd_xgb_model.joblib
-    python predict.py --model ckd_xgb_model.joblib --input patient.json
 """
 
 import argparse

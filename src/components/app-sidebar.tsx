@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
+// import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
@@ -15,8 +15,8 @@ import {
 } from "@/components/ui/sidebar"
 import {
   ActivityIcon,
-  CalendarIcon,
-  ClipboardListIcon,
+  // CalendarIcon,
+  // ClipboardListIcon,
   HeartPulseIcon,
   LayoutDashboardIcon,
   Settings2Icon,
@@ -53,16 +53,16 @@ const data = {
         { title: "Health tip", url: "#/" },
       ],
     },
-    {
-      title: "My Kidney Risk",
-      url: "#",
-      icon: <ActivityIcon />,
-      items: [
-        { title: "Status details", url: "#" },
-        { title: "What influenced my result", url: "#" },
-        { title: "History", url: "#" },
-      ],
-    },
+    // {
+    //   title: "My Kidney Risk",
+    //   url: "#",
+    //   icon: <ActivityIcon />,
+    //   items: [
+    //     { title: "Status details", url: "#" },
+    //     { title: "What influenced my result", url: "#" },
+    //     { title: "History", url: "#" },
+    //   ],
+    // },
     {
       title: "Monitor",
       url: "#/monitor/check-status",
@@ -71,30 +71,30 @@ const data = {
         { title: "Check Status", url: "#/monitor/check-status" },
       ],
     },
-    {
-      title: "Settings",
-      url: "#",
-      icon: <Settings2Icon />,
-      items: [
-        { title: "Profile", url: "#" },
-        { title: "Devices", url: "#" },
-        { title: "Notifications", url: "#" },
-        { title: "Consent & privacy", url: "#" },
-      ],
-    },
+    // {
+    //   title: "Settings",
+    //   url: "#",
+    //   icon: <Settings2Icon />,
+    //   items: [
+    //     { title: "Profile", url: "#" },
+    //     { title: "Devices", url: "#" },
+    //     // { title: "Notifications", url: "#" },
+    //     // { title: "Consent & privacy", url: "#" },
+    //   ],
+    // },
   ],
-  projects: [
-    {
-      name: "Appointments",
-      url: "#",
-      icon: <CalendarIcon />,
-    },
-    {
-      name: "Tasks",
-      url: "#",
-      icon: <ClipboardListIcon />,
-    },
-  ],
+  // projects: [
+  //   {
+  //     name: "Appointments",
+  //     url: "#",
+  //     icon: <CalendarIcon />,
+  //   },
+  //   {
+  //     name: "Tasks",
+  //     url: "#",
+  //     icon: <ClipboardListIcon />,
+  //   },
+  // ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -105,7 +105,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} label="Care" />
-        <NavProjects projects={data.projects} label="Shortcuts" />
+        {/* <NavProjects projects={data.projects} label="Shortcuts" /> */}
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

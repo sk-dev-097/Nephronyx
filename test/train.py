@@ -6,18 +6,6 @@ Train an XGBoost model to predict CKD stage (1-5).
 * By default eGFR and serum creatinine are excluded, because the stage label
   is computed from eGFR (label leakage). Add --use-egfr to include them.
 
-Output:
-    Saves the trained model to a .joblib file (default: ckd_xgb_model.joblib).
-    The joblib bundle contains:
-        - booster (the trained xgb.Booster)
-        - features (list[str])
-        - num_class (int)
-        - label_offset (int, always 1: model outputs 0..4, real labels 1..5)
-
-Usage:
-    python train_ckd_model.py
-    python train_ckd_model.py --csv ckd_synthetic_data.csv --use-egfr
-    python train_ckd_model.py --model-out my_model.joblib
 """
 
 import argparse

@@ -1,18 +1,7 @@
 """
 Synthetic CKD (Chronic Kidney Disease) longitudinal data generator.
-
 Each patient has several visits over time (eGFR declines at a patient-specific
 rate), so the data can be used for monitoring. Saves everything to a CSV.
-
-Notes
------
-* `sex` is stored numerically: 0 = Male, 1 = Female.
-* `ckd_stage` (1-5) is derived from eGFR, so eGFR/creatinine would leak the
-  label. The training script excludes them by default.
-
-Usage:
-    python generate_ckd_data.py
-    python generate_ckd_data.py --patients 2000 --seed 7 --output ckd_data.csv
 """
 
 import argparse
