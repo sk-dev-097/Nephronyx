@@ -19,7 +19,7 @@ import {
   // ClipboardListIcon,
   HeartPulseIcon,
   LayoutDashboardIcon,
-  Settings2Icon,
+  // Settings2Icon,
   StethoscopeIcon,
 } from "lucide-react"
 

@@ -34,6 +34,12 @@ import { Separator } from "@/components/ui/separator"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils"
 
+/**
+ * Backend base URL. On Render, set VITE_API_URL to the nephronyx-api URL
+ * (no trailing slash). Locally it is empty, so the Vite dev proxy handles /api.
+ */
+const API_BASE = ((import.meta.env.VITE_API_URL as string | undefined) ?? "").replace(/\/+$/, "")
+
 export type PatientClinicalData = {
   age: number
   sex: number
@@ -264,7 +270,7 @@ export default function CheckStatusPage() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch("/api/patient-data")
+      const res = await fetch(`${API_BASE}/api/patient-data`)
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
         throw new Error(
@@ -330,7 +336,7 @@ export default function CheckStatusPage() {
     setMessage(null)
     try {
       const payload = formToData(form)
-      const res = await fetch("/api/patient-data", {
+      const res = await fetch(`${API_BASE}/api/patient-data`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -353,7 +359,7 @@ export default function CheckStatusPage() {
     setMessage(null)
     try {
       const payload = formToData(form)
-      const res = await fetch("/api/predict", {
+      const res = await fetch(`${API_BASE}/api/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

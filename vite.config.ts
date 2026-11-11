@@ -23,4 +23,8 @@ export default defineConfig({
       },
     },
   },
+  // Needed on Render: `vite preview` blocks unknown hostnames by default.
+  preview: {
+    allowedHosts: true,
+  },
 })
